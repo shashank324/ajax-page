@@ -1,0 +1,250 @@
+<html>
+<head>
+   <link rel="stylesheet" href="dist/css/bootstrap.css">
+   <link rel="stylesheet" href="dist/fa/css/all.css">
+   <script src="dist/js/jquery.min.js"></script>
+   <script src="dist/js/bootstrap.js"></script>
+</head>
+
+<body>
+<br>
+	<div class="container">
+	
+		<div class="row well">
+	
+			<div class="col-md-2">
+			  <img src="1.jpg" class="img-responsive img-thumbnail">
+			</div>
+			
+			<div class="col-md-4">
+			<div class="row">
+				<button class="btn btn-success btn-sm"><i class="fa fa-star"></i></button>
+				<button class="btn btn-success btn-sm"><i class="fa fa-star"></i></button>
+				<button class="btn btn-success btn-sm"><i class="fa fa-star"></i></button>
+				<button class="btn btn-success btn-sm"><i class="fa fa-star"></i></button>
+				<button class="btn btn-danger btn-sm"><i class="fa fa-star"></i></button>
+				<h5>90% positive feedback !</h5>
+			</div>	
+			</div>
+			
+			<div class="col-md-1"></div>
+			
+			<div class="col-md-5">
+			
+				<h4>CONTACT INFORMATION</h4>
+			<p>	
+			Address:banglore<br>
+				pincode:759103<br>
+				Mob no:998979898<br>
+			</p>	
+			
+			</div>
+	
+		</div><!--row end-->
+		
+		
+		<div class="row">
+		
+		<div class="col-md-3">
+		   <ul class="list-group">
+		        <li class="list-group-item active ">Profile setting</li>
+		       <li class="list-group-item"><i class="fa fa-users"></i> <a href="javascript:void(0)" onclick="home()">Leads</a></li>
+		       <li class="list-group-item"><i class="fa fa-user-circle"></i> <a href="javascript:void(0)" onclick="profile()">Profile</a></li>
+		       <li class="list-group-item"><i class="fa fa-map-marker-alt"></i> <a href="javascript:void(0)" onclick="contact()">Contact Details</a></li>
+		       <li class="list-group-item"><i class="fa fa-briefcase"></i> <a href="javascript:void(0)" onclick="business()">Busines Category</a></li>
+		       <li class="list-group-item"><i class="fa fa-folder"></i> <a href="javascript:void(0)" onclick="portfolio()">My Portfolio</a></li>
+		       <li class="list-group-item"><i class="fa fa-images"></i> <a href="javascript:void(0)" onclick="photo()">Manage Photo</a></li>
+		       <li class="list-group-item"><i class="fa fa-video"></i> <a href="javascript:void(0)" onclick="video()">Manage Video</a></li>
+		       <li class="list-group-item"><i class="fa fa-edit"></i> <a href="javascript:void(0)" onclick="chngpswrd()">Change password</a></li>
+		   </ul>
+		
+		</div>
+		<div class="col-md-9" id="displaybox">
+		
+		
+		</div>
+		
+		</div> <!--2nd row end-->
+	
+	</div><!--container end-->
+
+
+	<script>
+	 
+	 function portfolio()
+	 {
+	         if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("displaybox").innerHTML = this.responseText;
+            }
+        };
+		
+		
+		xmlhttp.open("GET","myportfolio.html",true);
+		xmlhttp.send();
+	 }
+	 
+	 
+	 
+	 function home()
+	 {
+	         if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("displaybox").innerHTML = this.responseText;
+            }
+        };
+		
+		
+		xmlhttp.open("GET","home.html",true);
+		xmlhttp.send();
+	 }
+	 
+	 
+	  function chngpswrd()
+	 {
+	         if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("displaybox").innerHTML = this.responseText;
+            }
+        };
+		
+		
+		xmlhttp.open("GET","changepassword.html",true);
+		xmlhttp.send();
+	 }
+	 
+	 
+	 
+	 function profile()
+	 {
+	         if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("displaybox").innerHTML = this.responseText;
+            }
+        };
+		
+		
+		xmlhttp.open("GET","edit-profile.html",true);
+		xmlhttp.send();
+	 }
+	 
+	 
+	 
+	 
+	 function contact()
+	 {
+	         if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("displaybox").innerHTML = this.responseText;
+            }
+        };
+		
+		
+		xmlhttp.open("GET","edit-contact.html",true);
+		xmlhttp.send();
+	 }
+	 
+	 
+	 
+	 
+	 function photo()
+	 {
+	         if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("displaybox").innerHTML = this.responseText;
+            }
+        };
+		
+		
+		xmlhttp.open("GET","manage-photo.html",true);
+		xmlhttp.send();
+	 }
+	 
+	  function video()
+	 {
+	         if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("displaybox").innerHTML = this.responseText;
+            }
+        };
+		
+		
+		xmlhttp.open("GET","manage-video.html",true);
+		xmlhttp.send();
+	 }
+	 
+	 
+	 function business()
+	 {
+	         if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("displaybox").innerHTML = this.responseText;
+            }
+        };
+		
+		
+		xmlhttp.open("GET","business-category.html",true);
+		xmlhttp.send();
+	 }
+	 
+	 
+	</script>
+	
+</body>
+</html>
